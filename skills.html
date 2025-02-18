@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Fatima Abdul Raheem</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .skills-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: slideUp 1s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .skill-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .skill {
+            width: 80%;
+            text-align: left;
+            font-size: 1.2em;
+            opacity: 0;
+            animation: fadeInSkill 1s ease-in forwards;
+        }
+
+        .skill:nth-child(1) { animation-delay: 0.5s; }
+        .skill:nth-child(2) { animation-delay: 0.7s; }
+
+        @keyframes fadeInSkill {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .skill-bar {
+            background: rgba(255, 255, 255, 0.2);
+            width: 100%;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background: #61dafb;
+            border-radius: 10px;
+            position: absolute;
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+
+        /* Animated Loading Effect */
+        .animate-skills .skill-fill {
+            width: 90%;
+        }
+
+        /* Sidebar */
+        .menu-toggle {
+            font-size: 2em;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            transition: left 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .sidebar ul li a:hover {
+            color: #61dafb;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Three-Lines Menu Button -->
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    
+    <!-- Sidebar Menu -->
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Skills Section -->
+    <div class="skills-container animate-skills">
+        <h1>My Skills</h1>
+        <p>Here are some of my technical and creative skills:</p>
+        
+        <div class="skill-list">
+            <div class="skill">
+                <p>C++</p>
+                <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+            </div>
+            
+            <div class="skill">
+                <p>Canva</p>
+                <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.style.left === "0px") {
+                sidebar.style.left = "-250px";
+            } else {
+                sidebar.style.left = "0px";
+            }
+        }
+
+        // Animate skill bars on load
+        window.onload = function() {
+            document.querySelector(".skills-container").classList.add("animate-skills");
+        };
+    </script>
+</body>
+</html>

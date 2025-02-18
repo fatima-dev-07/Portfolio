@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title - Fatima Abdul Raheem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Image -->
+    <div class="project-bg"></div>
+
+    <!-- Three-Lines Menu Button -->
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+
+    <!-- Sidebar Menu -->
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+        </ul>
+    </nav>
+
+    <!-- Project Details Section -->
+    <div class="project-container">
+        <h1 class="fade-in">Project Title</h1>
+        <p class="project-description slide-in">This is where the detailed description of the project will go. Explain what the project does, the technologies used, and any challenges faced during development.</p>
+        
+        <!-- Technologies Used -->
+        <div class="tech-stack zoom-in">
+            <h3>Technologies Used</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+        </div>
+
+        <!-- Project Video Section -->
+        <div class="video-container fade-in">
+            <video controls>
+                <source src="project-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Project Links -->
+        <div class="project-links fade-in">
+            <a href="#" class="btn">📂 GitHub Repo</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+/* Project Page Background */
+.project-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('project-bg.png') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Project Container */
+.project-container {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.project-container h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.project-description {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Technologies Used */
+.tech-stack {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    animation: zoomIn 1s ease-in-out;
+}
+.tech-stack h3 {
+    color: #61dafb;
+    margin-bottom: 10px;
+}
+.tech-stack ul {
+    list-style: none;
+    padding: 0;
+}
+.tech-stack li {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: white;
+}
+
+/* Video Player Styling */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Project Links */
+.project-links {
+    margin-top: 20px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #61dafb;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background: #4da6f5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Apply animations */
+.fade-in { animation: fadeIn 1s ease-in-out; }
+.slide-in { animation: slideIn 1s ease-in-out; }
+.zoom-in { animation: zoomIn 1s ease-in-out; }
+</style>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Fatima Abdul Raheem</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            overflow-y: auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .about-container {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+        }
+        .about-container img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .about-container p, .about-container h2, .about-container ul {
+            margin-bottom: 20px;
+        }
+        .timeline {
+            list-style-type: none;
+            padding: 0;
+        }
+        .timeline li {
+            margin-bottom: 10px;
+        }
+        .resume-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .resume-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Three-Lines Menu Button -->
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+
+    <!-- Sidebar Menu -->
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <div class="about-container">
+        <h1>About Me</h1>
+        <img src="profile.jpg" alt="Fatima Abdul Raheem" class="profile-pic">
+        <p>Hi! I'm <strong>Fatima Abdul Raheem</strong>, a passionate <strong>C++ Developer</strong> and <strong>AI Enthusiast</strong>.  
+            Currently, I am a second-semester student with a deep interest in <strong>Artificial Intelligence</strong>. I specialize in C++ and have developed several game projects, including recreations of <strong>Chess</strong> and <strong>Metal Slug</strong> with graphics.  
+            I am particularly fascinated by the advancements of AI in the biomedical field, including neural interfaces like <strong>Neuralink</strong>. My goal is to explore the future of AI-driven innovations and their impact on human life.
+        </p>
+            
+        <!-- Experience & Education -->
+        <h2>Experience & Education</h2>
+        <ul class="timeline">
+            <li><strong>C++ Developer Projects</strong></li>
+            <li><strong>Freelance Fiverr</strong> </li>
+            <li><strong>Bachelor's in Artificial Intelligence</strong> - Information Technology University (ITU) (2024-2028)</li>
+        </ul>
+
+        <!-- Download Resume Button -->
+        <a href="Fatima ABDR cv.png" class="resume-btn" download>📄 Download Resume</a>
+        <br><br><br><br><br>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var sidebar = document.getElementById("sidebar");
+            if (sidebar.style.left === "0px") {
+                sidebar.style.left = "-250px";
+            } else {
+                sidebar.style.left = "0px";
+            }
+        }
+    </script>
+</body>
+</html>

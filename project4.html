@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snakes and Ladders - Fatima Abdul Raheem</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Background Animation -->
+    <div class="animated-bg"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">Fatima Abdul Raheem</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Details Section -->
+     <br><br><br><br><br><br>
+    <div class="project-container scroll-animation">
+        <h1 class="fade-in">Snakes and Ladders</h1><br>
+        <p class="project-description slide-in">
+            A console-based Snakes and Ladders game built in C++ using only the standard library. Features smooth console animations, real-time board updates, <br>and an interactive UI—all without graphics libraries. Showcases advanced console manipulation and game logic implementation.
+        </p>
+        
+        
+       
+        <br><br>
+        <!-- Project Video Section -->
+        <div class="video-container fade-in scroll-animation">
+            <video controls width="900" heisght="400">
+                <source src="background2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+ 
+  <br>
+ <!-- Technologies Used -->
+ <div class="tech-stack zoom-in scroll-animation">
+    <!--<h3>Technologies Used</h3><br>-->
+    <ul>
+        <li><i class="fa-solid fa-code"></i> C++</li>
+    </ul>
+</div>
+<br><br>
+        <!-- Project Links -->
+        <div class="project-links fade-in scroll-animation">
+            <a href="#" class="btn"><i class="fab fa-github"></i> GitHub Repo</a>
+        </div>
+    </div>
+    <br><br>
+
+    <script>
+       
+        document.addEventListener("scroll", function () 
+        {
+            const elements = document.querySelectorAll(".scroll-animation");
+            elements.forEach(el => {
+                const position = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (position < windowHeight - 100) {
+                    el.classList.add("visible");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+<style>
+/* Animated Background */
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #141e30, #243b55, #141e30, #1e3c72);
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: bgAnimation 10s infinite linear;
+}
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #61dafb;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+.navbar ul li a:hover {
+    color: #61dafb;
+}
+
+/* Technologies Used */
+.tech-stack ul {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.tech-stack li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: white;
+}
+.tech-stack i {
+    font-size: 1.5em;
+}
+
+/* Project Links */
+.project-links .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    background: #61dafb;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    text-decoration: none;
+}
+.project-links .btn:hover {
+    background: #4da6f5;
+}
+</style>
